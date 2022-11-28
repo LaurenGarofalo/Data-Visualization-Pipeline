@@ -350,7 +350,8 @@ class DataProcessor():
         metadata_dict[timestamp_label] = date_and_time[1]    
         
         #update the metadata held in the processor with the updated dict
-        self.metadata = pd.DataFrame.from_dict(metadata_dict, orient = "index")    
+        #self.metadata = pd.DataFrame.from_dict(metadata_dict, orient = "index", columns = [0, 1]) 
+        self.metadata = pd.DataFrame(metadata_dict.items(), columns=[0, 1])
         
         
          
